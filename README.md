@@ -4,9 +4,9 @@
 ### Prerequisites
 1. A basic understanding of what capabilities are available within Microsoft Fabric. If you're not familiar with Fabric, the two resources below are a great start!
 
-  https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview
+      https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview
   
-  https://learn.microsoft.com/en-us/training/paths/get-started-fabric/ 
+      https://learn.microsoft.com/en-us/training/paths/get-started-fabric/ 
   
 2. A Microsoft Fabric capacity (a trial license is sufficient: https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial
 
