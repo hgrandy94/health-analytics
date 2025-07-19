@@ -1,5 +1,6 @@
 # Tutorial Instructions
 
+## Part 1: Workspace and Lakehouse Setup
 1. In this repository, go to health-analytics/data and download all files in the folder.
 2. Navigate to https://app.fabric.microsoft.com/and sign in.
 3. Create a new workspace. Click on Workspaces >> +New Workspace, as shown in the screenshot below. You can name your workspace whatever you'd like (recommendation: Health Analytics Tutorial).
@@ -17,3 +18,9 @@
 6. Open the subfolder, click on Get data >> Upload files. Upload all the files downloaded in step 1. 
 
 ![upload_lakehouse](4_upload_lakehouse.png)
+
+## Part 2: Data Transformation / Cleansing
+
+## Part 3: Semantic Model Preparation
+
+## Part 4: Data Visualization
