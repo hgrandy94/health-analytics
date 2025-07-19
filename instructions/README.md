@@ -6,7 +6,7 @@ The diagram below provides a high-level overview of the steps we'll follow in th
 
 ## Part 1: Workspace and Lakehouse Setup
 1. In this repository, go to health-analytics/data and download all files in the folder.
-2. Navigate to https://app.fabric.microsoft.com/and sign in.
+2. Navigate to https://app.fabric.microsoft.com/ and sign in.
 3. Create a new workspace. Click on Workspaces >> +New Workspace, as shown in the screenshot below. You can name your workspace whatever you'd like (recommendation: Health Analytics Tutorial).
 
 ![create_workspace](imgs/1_create_workspace.png)
@@ -39,7 +39,7 @@ Note: As we won't be using Git integration or deployment pipelines in this tutor
 
 10. Let's fix the data quality issues with this file!
     a. The headers didn't come through properly, so navigate to Transform>>Use first row as headers to fix this.
-    ![promote_first_row](imgs/8_promote_first_row.png)
+    ![promote_first_row](imgs/8_promot_first_row.png)
 
     b. Columns Zone, Type, and CTAS all have blank values, which is not ideal for downstream processing. Let's replace all blank cells with "Unknown." In the Transform tab, click on Repalce values. Leave "Value to find" blank, and enter     "Unknown" in the "Replace with" box, as shown in the screenshot below.
     ![replace_blanks](imgs/9_replace_values.png)
