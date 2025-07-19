@@ -55,6 +55,23 @@ Note: As we won't be using Git integration or deployment pipelines in this tutor
 
     ![custom_formula](imgs/11_custom_formula.png)
 
+11. We've fixed the data quality issues with the Action for Health dataset! Now, we have to configure the data destination to save the clean data to a Lakehouse table. In the bottom right-hand corner, select Data destination>>Lakehouse.
+Note: In the screenshot, the Lakehouse is already configured as a data destination. You will see "No data destination" in your environment.
+
+![data_destination](imgs/12_data_dest.png)
+
+Leave the default connection credentials and click Next. Choose the Lakehouse created in step 4, and update the Table name to "ActionForHealthTbl." Click Next.
+
+![new_tbl](imgs/13_create_new_tbl.png)
+
+12. Return to the Home tab of your DFG2, and click on Save & run. Once the run is complete, verify that the ActionForHealthTbl table is in your Lakehouse.
+
+![save_and_run](imgs/14_save_and_run.png)
+
+
+
+
+
 ## Part 3: Semantic Model Preparation
 
 ## Part 4: Data Visualization
