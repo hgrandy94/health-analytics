@@ -174,6 +174,34 @@ Note: This data model does not reflect and optimal star schema structure which i
 
 27. Build your report! You are welcome to create whatever you like for this component. Below, some ideas and screenshots are available to help you get started.
 
+*Tip*: Due to the nature of the data, it is suggested to create a report with three pages - one for ActionForHealthTbl, one for DiabetesPrevalenceTbl, and one for PrimaryCareTbl. This is suggested since these datasets are largely unrelated. From the perspective of presenting information correctly, it is best to keep the reports separately.
+
 a. Use the Table visual to list all metrics tracked in the ActionForHealthTbl.
     
 b. Use the Slicer visual to create filters on your reports. For example, drag "Zone" into the Slicer visual, allowing users to view the data by Zone.
+
+c. Check out the sample report below, noting that this was generated from a different dataset (use it for ideas!). This report uses the following visuals:
+
+    i. Card visuals for showing target metrics
+    
+    ii. Slicers for enabling the filtering of Department and Year
+    
+    iii. Line chart for revenue over time
+    
+    iv. Line and clustered column chart for cost of care delivery
+
+    v. Stacked bar chart for patients by region
+
+    vi. Pie chart for total facilities provided
+
+    vii. Stacked bar chart for total system capacity
+
+![sample_report](imgs/26_example_report.png)
+
+Questions to consider:
+
+- What other data could I bring in to gain better insights?
+
+- What insights can I learn/share about primary care access?
+
+- Can I bring in geospatial data to better understand and visualize diabetes prevalence?
