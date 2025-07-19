@@ -140,15 +140,25 @@ Leave the default connection credentials and click Next. Choose the Lakehouse cr
 
 ![configure_semantic_model](imgs/20_configure_semantic_model.png)
 
-22. Navigate to the semantic model, and open it for editing.
+22. Navigate to the semantic model, and ensure you are in Editing mode.
 
-23. Create the relationships between tables as follows:
+![edit_semantic_model](imgs/21_edit_semantic_model.png)
 
-    a. 
+23. Create the following joins. This can be done by dragging the column name from one table to the appropriate column name on another table. Fabric will auto-detect the relationship type for you, but it's always a good idea to double check it's correct! Alternatively, you can use the "Manage relationships" option in the ribbon and select tables and columns using a drop-down menu.
+
+    a. ActionForHealthTbl.ZoneID on Zones.ZoneID (many-to-one relationship)
+
+    b. DiabetesPrevalenceTbl.ZoneID on Zones.ZoneID (many-to-one relationship)
+
+    c. PrimaryCareTbl.ZoneID on Zones.ZoneID (many-to-one relationship)
+
+![configure_relationships](imgs/22_configure_relationships.png)
+
+Note: This data model does not reflect and optimal star schema structure which is highly recommended for Power BI reporting. The purpose of this tutorial is to get familiar with Microsoft Fabric workloads, not to create the best possible data model.
 
 ## Part 4: Data Visualization
 Finally, we can build our Power BI report! You are welcome to create whatever you like for this component. Below, some ideas and screenshots are available to help you get started.
 
-    a. Use the Table visual to list all metrics tracked in the ActionForHealthTbl.
+a. Use the Table visual to list all metrics tracked in the ActionForHealthTbl.
     
-    b. Use the Slicer visual to create filters on your reports. For example, drag "Zone" into the Slicer visual, allowing users to view the data by Zone.
+b. Use the Slicer visual to create filters on your reports. For example, drag "Zone" into the Slicer visual, allowing users to view the data by Zone.
