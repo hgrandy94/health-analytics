@@ -1,4 +1,8 @@
 # Tutorial Instructions
+## Tutorial Overview
+The diagram below provides a high-level overview of the steps we'll follow in this tutorial.
+
+![tutorial_overview](tutorial_overview.png)
 
 ## Part 1: Workspace and Lakehouse Setup
 1. In this repository, go to health-analytics/data and download all files in the folder.
