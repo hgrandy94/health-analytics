@@ -161,7 +161,18 @@ Note: Importantly, you can edit these relationships at any time! If you double c
 Note: This data model does not reflect and optimal star schema structure which is highly recommended for Power BI reporting. The purpose of this tutorial is to get familiar with Microsoft Fabric workloads, not to create the best possible data model.
 
 ## Part 4: Data Visualization
-Finally, we can build our Power BI report! You are welcome to create whatever you like for this component. Below, some ideas and screenshots are available to help you get started.
+
+24. Finally, we can build our Power BI report! From your semantic model, go to File>>Create new report.
+
+![create_report](imgs/24_create_report.png)
+
+25. A blank Power BI report will load on your screen. First, let's give the report a name and save it so that you don't lose your work! Got to File>>Save, and name the report "Health Analytics Report."
+
+![save_report](imgs/25_save_report.png)
+
+26. After saving, your blank report will open in Viewing mode. Return to Edit mode by clicking on Edit (look for the pencil icon).
+
+27. Build your report! You are welcome to create whatever you like for this component. Below, some ideas and screenshots are available to help you get started.
 
 a. Use the Table visual to list all metrics tracked in the ActionForHealthTbl.
     
