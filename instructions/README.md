@@ -24,6 +24,8 @@ The diagram below provides a high-level overview of the steps we'll follow in th
 ![upload_lakehouse](imgs/4_upload_lakehouse.png)
 
 ## Part 2: Data Transformation / Cleansing
+
+#### Action for Health Dataset
 7. Return to your workspace, click on +New item, and search for "Dataflow Gen2." Note that the search results will return items under "Get data" and "Prepare data," but both will create a blank Dataflow Gen2 (choosing either option is fine). Name the Dataflow Gen2 Action for Health DFG2, and and click Create.
 
 ![create_dfg2](imgs/5_create_dfg2.png)
@@ -68,9 +70,44 @@ Leave the default connection credentials and click Next. Choose the Lakehouse cr
 
 ![save_and_run](imgs/14_save_and_run.png)
 
+#### Diabetes Prevalence Dataset
+13. Repeat steps 7-9, this time for the "Diabetes_Crude_Prevalence_20250718.csv." In step 9, name the DFG2 "Diabetes Prevalence DFG2."
+
+14. Let's fix the data quality issues!
+    
+    a. The headers did not come through properly. As in 10a, click on Transform>>Use first row as headers. Refer back to the screenshot in that step if needed.
+
+    b. The zones in this file are in a format that isn't compatible with our other tables. Let's split the Zone column using the " - " delimiter. Click on the Zone column and navigate to Transform>>Split column>>By delimiter.
+
+    ![split_col](imgs/15_split_col.png)
+
+    In the Separator drop-down menu, choose the Custom option.
+    
+    ![custom_split](imgs/15a_split_custom.png)
+
+    Enter " - " (without the quotations) as the Separator and click OK.
+
+    ![custom_sep](imgs/15b_separator.png)
+
+    The newly split columns need to be renamed. Rename Zone.1 to Zone, and Zone.2 to ZoneName. This can be done by double clicking on the column header.
+
+    ![new_columns](imgs/15c_new_cols.png)
+
+    c. As in 10c, we need to add a calculated column to get the Zone ID. Follow the same steps as in 10c, including copying the DAX formula, to generate the Zone ID column.
+
+    d. Validate all steps have been completed by reviewing the screenshot below (ignore the "Changed column type step, and initial Navigation steps).
+
+    ![diabetes_dataflow](imgs/16_diabetes_dfg2.png)
+
+15. Now that the data is clean, we need to configure the Lakehouse destination and save as a table as in steps 11 and 12. Follow these same steps, this time naming the table, "DiabetesPrevalenceTbl."
+
+#### Accessing Primary Care Dataset
 
 
+#### Zones Dataset
+ This file was created to act as a bridging table between multiple tables with Zone ID. Because of this, we know there are no data quality issues, and can take advantage of the Fabric Lakehouse user interface to load Zones into a delta table. In your lakehouse, hover over Zones.csv, click on the ellipsis, then Load to tables>>New table. Name the table Zones, leave the default settings, and click Load.
 
+ ![ui_load_table](imgs/)
 
 ## Part 3: Semantic Model Preparation
 
