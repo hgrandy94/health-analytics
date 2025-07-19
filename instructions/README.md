@@ -35,7 +35,7 @@ Note: As we won't be using Git integration or deployment pipelines in this tutor
 ![get data](imgs/6_get_data.png)
 
 9. Choose the Workspace you created in step 3, then click on the Lakehouse you created in step 4. Open the "Files" folder and select "Action_for_Health_20250718.csv." Click Create.
-![connect_data](imgs/7_action_for_health.png) 
+![connect_data](imgs/7_action_for_health_data.png) 
 
 ## Part 3: Semantic Model Preparation
 
