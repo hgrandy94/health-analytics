@@ -24,6 +24,18 @@ The diagram below provides a high-level overview of the steps we'll follow in th
 ![upload_lakehouse](imgs/4_upload_lakehouse.png)
 
 ## Part 2: Data Transformation / Cleansing
+7. Return to your workspace, click on +New item, and search for "Dataflow Gen2." Note that the search results will return items under "Get data" and "Prepare data," but both will create a blank Dataflow Gen2 (choosing either option is fine). Name the Dataflow Gen2 Action for Health DFG2, and and click Create.
+
+![create_dfg2](imgs/5_create_dfg2.png)
+
+Note: As we won't be using Git integration or deployment pipelines in this tutorial, there will be no impact if you uncheck the box, as shown below.
+![uncheck_box](imgs/5a_uncheck_box.png)
+
+8. The blank DFG2 will open. Click on Get data >> More, then search for and select "Lakehouse."
+![get data](imgs/6_get_data.png)
+
+9. Choose the Workspace you created in step 3, then click on the Lakehouse you created in step 4. Open the "Files" folder and select "Action_for_Health_20250718.csv." Click Create.
+![connect_data](imgs/7_action_for_health.png) 
 
 ## Part 3: Semantic Model Preparation
 
