@@ -154,6 +154,10 @@ Leave the default connection credentials and click Next. Choose the Lakehouse cr
 
 ![configure_relationships](imgs/22_configure_relationships.png)
 
+![verify_relationship](imgs/23_verify_relationships.png)
+
+Note: Importantly, you can edit these relationships at any time! If you double click on any of the relationships (line between tables), you can make modifications as needed. Modifications can also be made using the "Manage relationships" option.
+
 Note: This data model does not reflect and optimal star schema structure which is highly recommended for Power BI reporting. The purpose of this tutorial is to get familiar with Microsoft Fabric workloads, not to create the best possible data model.
 
 ## Part 4: Data Visualization
