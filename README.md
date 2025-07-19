@@ -8,7 +8,7 @@
   
       https://learn.microsoft.com/en-us/training/paths/get-started-fabric/ 
   
-2. A Microsoft Fabric capacity (a trial license is sufficient: https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial
+2. A Microsoft Fabric capacity - a trial license is sufficient: https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial
 
 In this tutorial, you'll learn how to transform raw data csv using Dataflows Gen2 and Spark Notebooks in Microsoft Fabric to structured tables in a Fabric Lakehouse. Once you've landed the data in the Lakehouse, you'll then create a semantic model which is the backend that powers Power BI reports. The last step is visualizing the cleansed data in a Power BI report.
 
