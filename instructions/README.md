@@ -198,6 +198,8 @@ c. Check out the sample report below, noting that this was generated from a diff
 
 ![sample_report](imgs/26_example_report.png)
 
+d. Feeling ambitious? Start learning about creating measures in Power BI! https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-tutorial-create-measures
+
 Questions to consider:
 
 - What other data could I bring in to gain better insights?
