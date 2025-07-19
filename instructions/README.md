@@ -37,6 +37,24 @@ Note: As we won't be using Git integration or deployment pipelines in this tutor
 9. Choose the Workspace you created in step 3, then click on the Lakehouse you created in step 4. Open the "Files" folder and select "Action_for_Health_20250718.csv." Click Create.
 ![connect_data](imgs/7_action_for_health_data.png) 
 
+10. Let's fix the data quality issues with this file!
+    a. The headers didn't come through properly, so navigate to Transform>>Use first row as headers to fix this.
+    ![promote_first_row](imgs/8_promote_first_row.png)
+
+    b. Columns Zone, Type, and CTAS all have blank values, which is not ideal for downstream processing. Let's replace all blank cells with "Unknown." In the Transform tab, click on Repalce values. Leave "Value to find" blank, and enter     "Unknown" in the "Replace with" box, as shown in the screenshot below.
+    ![replace_blanks](imgs/9_replace_values.png)
+
+    c. In this dataset, we have the zone name, i.e. Central, Western, etc., but not the associated Zone ID which is preferred for table joins. Let's create a calculated column to get the Zone ID based on the Zone column. In the ribbon, click on Add column>>Custom column.
+    ![calculated_col](imgs/10_custom_col.png)
+
+    We need to enter a formula using the DAX expression language to implement the logic. Copy and paste the following formula into the box. Review the screenshot below for comparison, and click OK.
+    
+    ```
+    if [Zone] = "Western" then 1 else if [Zone] = "Northern" then 2 else if [Zone] = "Eastern" then 3 else if [Zone] = "Central" then 4 else 5
+    ```
+
+    ![custom_formula](imgs/11_custom_formula.png)
+
 ## Part 3: Semantic Model Preparation
 
 ## Part 4: Data Visualization
