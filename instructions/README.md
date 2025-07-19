@@ -2,6 +2,8 @@
 ## Tutorial Overview
 The diagram below provides a high-level overview of the steps we'll follow in this tutorial.
 
+Note: Zones.csv is missing from this diagram, and the Community Health csv has been removed from the tutorial.
+
 ![tutorial_overview](imgs/tutorial_overview.png)
 
 ## Part 1: Workspace and Lakehouse Setup
