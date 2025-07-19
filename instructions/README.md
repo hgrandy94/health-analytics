@@ -123,11 +123,32 @@ Leave the default connection credentials and click Next. Choose the Lakehouse cr
 
 ## Part 3: Semantic Model Preparation
 19. Verify that there are four tables in your Lakehouse:
+
     a. ActionForHealthTbl
+
     b. DiabetesPrevalenceTbl
+
     c. PrimaryCareTbl
+
     d. Zones
 
-20. Let's configure the semantic model, which is the backend for our data visualizations.
+20. Let's configure the semantic model, which is the backend for our data visualizations. From your Lakehouse, click on "New semantic model." Note: The Lakehouse in the screenshot below contains additional tables that are not required for this tutorial. The required tables are indicated by the red arrow.
+
+![create_sm](imgs/19_lakehouse_tbls.png)
+
+21. Under semantic model name, enter "health_analytics_sm". Below, expan "dbo" and "Tables." Click on the four tables mentioned in step 19 - we want to add all of these to our semantic model. Click on Confirm. Note: Tables PrimaryCareTbl and Zones are not shown in the screenshot below, but should be included in your semantic model.
+
+![configure_semantic_model](imgs/20_configure_semantic_model.png)
+
+22. Navigate to the semantic model, and open it for editing.
+
+23. Create the relationships between tables as follows:
+
+    a. 
 
 ## Part 4: Data Visualization
+Finally, we can build our Power BI report! You are welcome to create whatever you like for this component. Below, some ideas and screenshots are available to help you get started.
+
+    a. Use the Table visual to list all metrics tracked in the ActionForHealthTbl.
+    
+    b. Use the Slicer visual to create filters on your reports. For example, drag "Zone" into the Slicer visual, allowing users to view the data by Zone.
