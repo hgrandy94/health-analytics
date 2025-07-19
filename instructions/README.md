@@ -43,7 +43,7 @@ Note: As we won't be using Git integration or deployment pipelines in this tutor
     a. The headers didn't come through properly, so navigate to Transform>>Use first row as headers to fix this.
     ![promote_first_row](imgs/8_promot_first_row.png)
 
-    b. Columns Zone, Type, and CTAS all have blank values, which is not ideal for downstream processing. Let's replace all blank cells with "Unknown." In the Transform tab, click on Repalce values. Leave "Value to find" blank, and enter     "Unknown" in the "Replace with" box, as shown in the screenshot below.
+    b. Columns Zone, Type, and CTAS all have blank values, which is not ideal for downstream processing. Let's replace all blank cells with "Unknown." In the Transform tab, click on Repalce values. Leave "Value to find" blank, and enter "Unknown" in the "Replace with" box, as shown in the screenshot below.
     ![replace_blanks](imgs/9_replace_values.png)
 
     c. In this dataset, we have the zone name, i.e. Central, Western, etc., but not the associated Zone ID which is preferred for table joins. Let's create a calculated column to get the Zone ID based on the Zone column. In the ribbon, click on Add column>>Custom column.
@@ -102,13 +102,32 @@ Leave the default connection credentials and click Next. Choose the Lakehouse cr
 15. Now that the data is clean, we need to configure the Lakehouse destination and save as a table as in steps 11 and 12. Follow these same steps, this time naming the table, "DiabetesPrevalenceTbl."
 
 #### Accessing Primary Care Dataset
+16. Repeat steps 7-9, this time for the "Accessing_Primary_Care_in_Nova_Scotia_20250718.csv." In step 9, name the DFG2 "Primary Care DFG2."
 
+17. Let's fix the data quality issues!
+    a. The headers did not come through properly. As in 10a, click on Transform>>Use first row as headers. Refer back to the screenshot in that step if needed.
+
+    b. Columns CTAS and Hospital all have blank values, which is not ideal for downstream processing. Let's replace all blank cells with "Unknown." In the Transform tab, click on Repalce values. Leave "Value to find" blank, and enter "Unknown" in the "Replace with" box. Refer to step 10b for a screenshot if needed.
+
+    c. As in 10c, we need to add a calculated column to get the Zone ID. Follow the same steps as in 10c, including copying the DAX formula, to generate the Zone ID column.
+
+    d. Validate all steps have been completed by reviewing the screenshot below (ignore the "Changed column type step, and initial Navigation steps).
+    ![primary_care_dataflow](imgs/17_primary_care_dfg2.png)
+
+18. Now that the data is clean, we need to configure the Lakehouse destination and save as a table as in steps 11 and 12. Follow these same steps, this time naming the table, "PrimaryCareTbl."
 
 #### Zones Dataset
  This file was created to act as a bridging table between multiple tables with Zone ID. Because of this, we know there are no data quality issues, and can take advantage of the Fabric Lakehouse user interface to load Zones into a delta table. In your lakehouse, hover over Zones.csv, click on the ellipsis, then Load to tables>>New table. Name the table Zones, leave the default settings, and click Load.
 
- ![ui_load_table](imgs/)
+ ![ui_load_table](imgs/18_ui_load_table.png)
 
 ## Part 3: Semantic Model Preparation
+19. Verify that there are four tables in your Lakehouse:
+    a. ActionForHealthTbl
+    b. DiabetesPrevalenceTbl
+    c. PrimaryCareTbl
+    d. Zones
+
+20. Let's configure the semantic model, which is the backend for our data visualizations.
 
 ## Part 4: Data Visualization
