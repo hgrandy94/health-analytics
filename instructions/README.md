@@ -1,2 +1,2 @@
 # Tutorial Instructions
-![tutorial_overview](instructions/1_create_workspace.png)
+![tutorial_overview](1_create_workspace.png)
